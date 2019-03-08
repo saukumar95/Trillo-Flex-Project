@@ -5,6 +5,13 @@
   box-shadow: var(--dark-shadow);
   
   min-height: 50rem;
+
+  @media only screen and (max-width: $bp-largest){
+      margin: 0;
+      max-width: 100%;
+      width: 100%;
+  }
+
 }
 
 .header {
@@ -15,10 +22,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+        flex-wrap: wrap;
+        align-content: space-around;
+        height: 11rem;
+    }
 }
 
 .content {
    display: flex;
+
+    @media only screen and (max-width: $bp-medium){
+        flex-direction: column;
+    }
 }
 
 .sidebar {
@@ -40,7 +57,16 @@
     padding: 4.5rem;
     font-size: 1.4rem;
     background-color: var(--color-grey-light-1);
-    border-bottom: var(--bottom-border);    
+    border-bottom: var(--bottom-border);
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+
 }
 
 .desciption {
@@ -49,6 +75,16 @@
     margin-right: 4.5rem;
     box-shadow: var(--light-shadow);
     padding: 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 }   
 
 .user-reviews {
@@ -63,7 +99,9 @@
 .cta {
     padding: 3.5rem 0;
     text-align: center;
-
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
+    }
     &__book-now {
         font-size: 2rem;
         font-weight: 300;
